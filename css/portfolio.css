@@ -48,12 +48,12 @@ i.bx-menu{
 
 /*  Side Navigation Bar  */
 nav{
-    height: calc(100vh - 78px);
+    height: calc(100vh - 6.5rem);
     width: 40px;
     background: var(--customColor);
-    overflow-y: scroll;
-    position: fixed;
-    top: 7.5rem;
+    overflow: auto;
+    position: absolute;
+    top: 7.8rem;
     left: 0;
 }
 
@@ -69,6 +69,12 @@ nav ul li{
     height: fit-content;
     width: fit-content;
 }
+
+
+nav ul{
+    overflow: scroll;
+}
+
 nav ul li{
     display: flex;
     margin: 1.5rem 0.5rem;
@@ -152,7 +158,6 @@ nav ul > li:hover span, .max-nav ul > li:hover span{
     left: 40px;
     z-index: 1;
     overflow-y: scroll;
-    padding-bottom: 2rem;
 }
 
 .samples{
