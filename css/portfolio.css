@@ -48,12 +48,12 @@ i.bx-menu{
 
 /*  Side Navigation Bar  */
 nav{
-    height: calc(100vh - 78px);
+    height: calc(100vh - 6.5rem);
     width: 40px;
     background: var(--customColor);
-    overflow-y: scroll;
-    position: fixed;
-    top: 7.5rem;
+    overflow: auto;
+    position: absolute;
+    top: 7.8rem;
     left: 0;
 }
 
@@ -69,6 +69,12 @@ nav ul li{
     height: fit-content;
     width: fit-content;
 }
+
+
+nav ul{
+    overflow: scroll;
+}
+
 nav ul li{
     display: flex;
     margin: 1.5rem 0.5rem;
@@ -152,7 +158,6 @@ nav ul > li:hover span, .max-nav ul > li:hover span{
     left: 40px;
     z-index: 1;
     overflow-y: scroll;
-    padding-bottom: 2rem;
 }
 
 .samples{
@@ -274,3 +279,67 @@ nav ul > li:hover span, .max-nav ul > li:hover span{
         width: 15rem;
     }
 }
+
+
+/* Services Content */
+.service-box{
+    height: fit-content;
+    border: none;
+    box-shadow: 0 0 8px 2px #000;
+}
+.service-box:hover{
+    background: var(--customColor);
+}
+.service-box:hover .service-title i,
+.service-box:hover .service-title h3{
+    color: #fff;
+}
+.service-box:hover .service-title h3{
+    text-shadow: 0 0 5px #000;
+}
+.service-box:hover .service-description {
+    background: #fff;
+    border-radius: 0.5rem;
+}
+.service-box:hover .service-description p{
+    color: var(--customColor);
+    text-shadow: none;
+}
+.service-title{
+    min-height: 17rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.service-title i{
+    height: fit-content;
+    width: fit-content;
+    font-size: 4rem;
+    margin-top: 4rem;
+    color: var(--customColor);
+}
+.service-title h3{
+    height: fit-content;
+    width: fit-content;
+    font-size: 2.5rem;
+    margin: auto;
+    margin-top: 2rem;
+    color: var(--customColor);
+}
+
+.service-description{
+    height: fit-content;
+    width: fit-content;
+    text-align: left;
+    padding: 1rem;
+    background: var(--customColor);
+}
+.service-description p{
+    color: #fff;
+    font-weight: 500;
+    transition: all 250ms ease-in-out;
+    word-spacing: 0.7rem;
+    text-shadow: 0 0 2px #000;
+    font-size: 1.8rem
+}
+/* End of Services Content */
