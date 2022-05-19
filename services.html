@@ -1,72 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/services.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheet -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.css" />
+    <!--PageClip-->
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/boxicons.css" />
+    <link rel="stylesheet" href="./css/portfolio.css">
     <title>Services</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header start -->
-  <header class="header" id="header">
-    <div class="navigation">
-      <div class="nav-center d-flex">
-        <a href="#">
-          <h2 class="logo d-flex">
-            <img class="logo-img" src="./images/Logo.png"><span class="name">The Wizards</span>
-          </h2>
-        </a>
-
-        <ul class="nav-list d-flex">
-          <li class="nav-item">
-            <a href="#header" class="nav-link scroll-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link scroll-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="./services.html" class="nav-link ">Services</a>
-          </li>
-          <li class="nav-item">
-            <a href="./portfolio.html" class="nav-link">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a href="./team.html" class="nav-link">Team</a>
-          </li>
-          <li class="nav-item">
-            <a href="./blog.html" class="nav-link">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a href="./contact.html" class="nav-link">Contact</a>
-          </li>
-
-          <!-- Theme -->
-          <li class="nav-item theme-icon">
+    <header>
+      <div class="navigation fix-nav">
+        <div class="nav-center d-flex">
+          <a href="#">
+            <h2 class="logo d-flex">
+              <img class="logo-img" src="./images/Logo.png"><span class="name">The Wizards</span>
+            </h2>
+          </a>
+  
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="#header" class="nav-link scroll-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link scroll-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="./services.html" class="nav-link ">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="./portfolio.html" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="./team.html" class="nav-link">Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="./blog.html" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="./contact.html" class="nav-link">Contact</a>
+            </li>
+  
+            <!-- Theme -->
+            <li class="nav-item theme-icon">
+              <i class="bx bx-moon"></i>
+            </li>
+  
+            <!-- Close Button -->
+            <div class="close">
+              <i class="bx bx-x"></i>
+            </div>
+          </ul>
+  
+          <!-- theme -->
+          <div class="theme theme-icon">
             <i class="bx bx-moon"></i>
-          </li>
-
-          <!-- Close Button -->
-          <div class="close">
-            <i class="bx bx-x"></i>
           </div>
-        </ul>
-
-        <!-- theme -->
-        <div class="theme theme-icon">
-          <i class="bx bx-moon"></i>
-        </div>
-
-        <!-- Hamburger -->
-        <div class="hamburger">
-          <i class="bx bx-menu"></i>
+  
+          <!-- Hamburger -->
+          <div class="hamburger">
+            <i class="bx bx-menu"></i>
+          </div>
         </div>
       </div>
+      <!-- Color Control -->
+      <div class="control">
+        <div class="widget d-flex">
+          <i class="bx bxs-cog"></i>
+        </div>
+        <div class="colors">
+          <span data-id="#42caff"></span>
+          <span data-id="#4285f4"></span>
+          <span data-id="#f59425"></span>
+          <span data-id="#28b922"></span>
+          <span data-id="#ce00ff"></span>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Side Navigation -->
+    <nav class="nav">
+      <ul>
+        <li class="show-max">
+          <span></span>
+          <span></span>
+        </li>
+        <a href="#"><li data-type="all">
+          <i class="bx bxl-windows"></i>
+          <h3>All Services</h3>
+        </li></a>
+        <a href="#"><li data-type="web-development">
+          <i class="bx bxl-dev-to"></i>
+          <h3>Web Development</h3>
+        </li></a>
+
+        <a href="#"><li data-type="content-writing">
+          <i class="bx bx-pencil"></i>
+          <h3>Content Writing</h3>
+        </li></a>
+
+        <a href="#"><li data-type="graphics-designing">
+          <i class="bx bx-images"></i>
+          <h3>Graphics Designing</h3>
+        </li></a>
+
+        <a href="#"><li data-type="photo-editing">
+          <i class="bx bx-video"></i>
+          <h3>Photo-Video Editing</h3>
+        </li></a>
+
+        <a href="#"><li data-type="business-consultancy">
+          <i class="bx bxs-business"></i>
+          <h3>Business Consultancy</h3>
+        </li></a>
+        
+        <a href="#"><li  data-type="Support-maintenance">
+          <i class="bx bx-support"></i>
+          <h3>Support and Maintenance</h3>
+        </li></a>
+        
+      </ul>
+    </nav>
+    <!-- Side Navigation End -->
+   
+    <div class="container-fixed">
+      <!-- Portfolio -->
+      <div class="title">
+        <h1>Services</h1>
+      </div>
+      <div class="services samples">
+          <div class="empty">
+              <h3>Services will be Updated Soon</h3>
+          </div>
+          <div class="service-box sample-box" data-type="web-development">
+              <div class="service-title">
+                  <i class="bx bx-code-block"></i>
+                  <h3>
+                      Website Development
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Our team works to deliver a perfect & classy website which not only fulfills your requirements
+            but also amplifies your brand.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="web-development">
+              <div class="service-title">
+                  <i class="bx bxl-wordpress"></i>
+                  <i class="bx bxl-shopify"></i>
+                  <i class="bx bxl-wix"></i>
+                  <h3>
+                      Wordpress, Shopify, Wix Websites
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Our team works to deliver a perfect & classy website which not only fulfills your requirements
+            but also amplifies your brand.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="web-development">
+              <div class="service-title">
+                  <i class="bx bx-slideshow"></i>
+                  <h3>
+                      Custom Web Aplications
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Our team works to deliver a perfect & classy website which not only fulfills your requirements
+            but also amplifies your brand.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="web-development">
+              <div class="service-title">
+                  <i class="bx bx-bug"></i>
+                  <h3>
+                      Website Improvement &amp; Bug Fixes
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Our team works to deliver a perfect & classy website which not only fulfills your requirements
+            but also amplifies your brand.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="web-development">
+              <div class="service-title">
+                  <i class="bx bx-search-alt"></i>
+                  <h3>
+                      Search Engine Optimization (SEO)
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Our team works to deliver a perfect & classy website which not only fulfills your requirements
+            but also amplifies your brand.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="content-writing">
+              <div class="service-title">
+                  <i class="bx bx-copyright"></i>
+                  <h3>
+                      Copywriting
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      With each passing day, the importance of the quality of your online content is increasing. The content has to be engaging, informative, helpful.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="content-writing">
+              <div class="service-title">
+                  <i class="bx bx-notepad"></i>
+                  <h3>
+                      Articles &amp; Report Writing
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      With each passing day, the importance of the quality of your online content is increasing. The content has to be engaging, informative, helpful.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="content-writing">
+              <div class="service-title">
+                  <i class="bx bxl-blogger"></i>
+                  <h3>
+                      Blogs &amp; Reviews
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      With each passing day, the importance of the quality of your online content is increasing. The content has to be engaging, informative, helpful.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="content-writing">
+              <div class="service-title">
+                  <i class="bx bxl-twitter"></i>
+                  <i class='bx bxl-facebook-square'></i>
+                  <i class='bx bxl-instagram'></i>
+                  <h3>
+                      Social Media Content
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      With each passing day, the importance of the quality of your online content is increasing. The content has to be engaging, informative, helpful.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="content-writing">
+              <div class="service-title">
+                  <i class="bx bxs-book"></i>
+                  <h3>
+                      Research &amp; Technical Writing
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      With each passing day, the importance of the quality of your online content is increasing. The content has to be engaging, informative, helpful.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="graphics-designing">
+              <div class="service-title">
+                  <i class="bx bx-news"></i>
+                  <h3>
+                      Website Design
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Having a good team of creative designers, we ensure that your business will surely make an impact on the mind of customers.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="graphics-designing">
+              <div class="service-title">
+                  <i class='bx bxl-java'></i>
+                  <h3>
+                      Logo Creation
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Having a good team of creative designers, we ensure that your business will surely make an impact on the mind of customers.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="graphics-designing">
+              <div class="service-title">
+                  <i class='bx bxl-microsoft-teams'></i>
+                  <h3>
+                      Template Design
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Having a good team of creative designers, we ensure that your business will surely make an impact on the mind of customers.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="graphics-designing">
+              <div class="service-title">
+                  <i class="bx bxl-sketch"></i>
+                  <h3>
+                      2D, 3D Graphics Designing
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Having a good team of creative designers, we ensure that your business will surely make an impact on the mind of customers.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="graphics-designing">
+              <div class="service-title">
+                  <i class='bx bxs-id-card'></i>
+                  <h3>
+                      Business Cards, Letter Covers etc.
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Having a good team of creative designers, we ensure that your business will surely make an impact on the mind of customers.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="photo-editing">
+              <div class="service-title">
+                  <i class='bx bxs-edit'></i>
+                  <h3>
+                      Photo Editing
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Just want your photo or video to be changed as per your choice? Don't worry! We offer all kinds of photo and video editing services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="photo-editing">
+              <div class="service-title">
+                  <i class='bx bx-video-recording'></i>
+                  <h3>
+                      Video Editing
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Just want your photo or video to be changed as per your choice? Don't worry! We offer all kinds of photo and video editing services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="photo-editing">
+              <div class="service-title">
+                  <i class='bx bx-user-voice'></i>
+                  <h3>
+                      Audio Editing
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Just want your photo or video to be changed as per your choice? Don't worry! We offer all kinds of photo and video editing services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="photo-editing">
+              <div class="service-title">
+                  <i class='bx bxs-videos'></i>
+                  <h3>
+                      Video Content Creation
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Just want your photo or video to be changed as per your choice? Don't worry! We offer all kinds of photo and video editing services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="photo-editing">
+              <div class="service-title">
+                  <i class='bx bx-wink-tongue'></i>
+                  <h3>
+                      Animations
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      Just want your photo or video to be changed as per your choice? Don't worry! We offer all kinds of photo and video editing services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="business-consultancy">
+              <div class="service-title">
+                  <i class='bx bxs-school'></i>
+                  <h3>
+                      Business Planning
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      The most crucial part for a business or start-up is planning which is often underestimated by people. Don't have the time or resources or experience for business planning,we are here.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="business-consultancy">
+              <div class="service-title">
+                  <i class='bx bx-line-chart'></i>
+                  <h3>
+                      Marketing
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      The most crucial part for a business or start-up is planning which is often underestimated by people. Don't have the time or resources or experience for business planning,we are here.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="business-consultancy">
+              <div class="service-title">
+                  <i class='bx bxl-whatsapp'></i>
+                  <h3>
+                      Social Media Management
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      The most crucial part for a business or start-up is planning which is often underestimated by people. Don't have the time or resources or experience for business planning,we are here.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="business-consultancy">
+              <div class="service-title">
+                  <i class='bx bxs-flask'></i>
+                  <h3>
+                      Market Research
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      The most crucial part for a business or start-up is planning which is often underestimated by people. Don't have the time or resources or experience for business planning,we are here.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="business-consultancy">
+              <div class="service-title">
+                  <i class='bx bxs-bank'></i>
+                  <h3>
+                      Investment Consultancy
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      The most crucial part for a business or start-up is planning which is often underestimated by people. Don't have the time or resources or experience for business planning,we are here.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="Support-maintenance">
+              <div class="service-title">
+                  <i class='bx bxs-bot'></i>
+                  <h3>
+                      Virtual Assistant
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      To keep our clients dynamic with the changing market trends and consumer demands, we provide all kinds of support and maintenance services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="Support-maintenance">
+              <div class="service-title">
+                  <i class='bx bxs-devices'></i>
+                  <h3>
+                      UI/UX Improvements
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      To keep our clients dynamic with the changing market trends and consumer demands, we provide all kinds of support and maintenance services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="Support-maintenance">
+              <div class="service-title">
+                  <i class='bx bx-book-reader'></i>
+                  <h3>
+                      Transcription &amp; Proof-reading
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      To keep our clients dynamic with the changing market trends and consumer demands, we provide all kinds of support and maintenance services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="Support-maintenance">
+              <div class="service-title">
+                  <i class='bx bxs-data'></i>
+                  <h3>
+                      Data Entry &amp; Data Handling
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      To keep our clients dynamic with the changing market trends and consumer demands, we provide all kinds of support and maintenance services.
+                  </p>
+              </div>
+          </div>
+          <div class="service-box sample-box" data-type="Support-maintenance">
+              <div class="service-title">
+                  <i class='bx bxs-traffic'></i>
+                  <h3>
+                      Maintenance
+                  </h3>
+              </div>
+              <div class="service-description">
+                  <p>
+                      To keep our clients dynamic with the changing market trends and consumer demands, we provide all kinds of support and maintenance services.
+                  </p>
+              </div>
+          </div>
+
+      </div>       
     </div>
-
-
-  </header>
-  <!-- Header end -->
-</body>
+    <script src="./js/index.js"></script>
+    <!-- Script -->
+    <script src="./js/portfolio.js"></script>
+  </body>
 </html>
